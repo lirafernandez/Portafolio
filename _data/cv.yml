@@ -1,1 +1,17 @@
+education:
+  - degree: Licenciatura en Biología
+    institution: Universidad Nacional Autónoma de México
+    year: 2023
 
+positions:
+  - title: Analista SIG
+    institution: Consultoría Ambiental XYZ
+    year: 2024-presente
+
+skills:
+  - QGIS, ArcGIS, Google Earth Engine, RStudio, Python, SQL, AutoCAD
+  - Normatividad ambiental, cartografía, visualización de datos espaciales
+
+languages:
+  - Español (nativo)
+  - Inglés (avanzado)
