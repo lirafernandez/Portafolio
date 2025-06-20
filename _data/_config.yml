@@ -1,1 +1,12 @@
+title: "Gerardo Sebastian"
+author: "Gerardo Sebastian"
+affiliation: "Biólogo & Especialista SIG"
+email: "tuemail@mail.com"
+description: "Portafolio académico y profesional en SIG, cartografía y EHS."
+github_username: lirafernandez
+linkedin_username: tu-linkedin
+# Puedes añadir más campos personalizados aquí
 
+# Idioma, tema, etc.
+lang: "es"
+theme: "al-folio"
