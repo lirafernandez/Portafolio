@@ -1,1 +1,13 @@
+- title: Mapa de rutas ambientales
+  description: Visualización geoespacial de rutas óptimas para monitoreo ambiental en áreas protegidas.
+  image: assets/img/rutas-ambientales.png
+  links:
+    - label: Ver proyecto
+      url: https://github.com/lirafernandez/proyecto-sig
 
+- title: Análisis EHS industrial
+  description: Auditorías de cumplimiento ambiental basadas en SIG y reportes gráficos.
+  image: assets/img/ehs-industrial.png
+  links:
+    - label: Ver informe
+      url: https://github.com/lirafernandez/ehs-industrial
