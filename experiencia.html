@@ -3,241 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <title>Experiencia | Portafolio SIG</title>
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .acordeon-exp {
-      margin-bottom: 32px;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 2px 12px rgba(30,94,176,0.08);
-      overflow: hidden;
-    }
-    .acordeon-titulo {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 18px 24px;
-      font-size: 1.13em;
-      font-weight: 600;
-      color: #2f69a6;
-      background: #f5f7fa;
-      border: none;
-      outline: none;
-      transition: background 0.18s;
-    }
-    .acordeon-titulo:hover {
-      background: #e6ebf2;
-    }
-    .acordeon-titulo i {
-      margin-right: 10px;
-      font-size: 1.1em;
-    }
-    .acordeon-icon {
-      transition: transform 0.2s;
-      color: #223962;
-      margin-left: 10px;
-      font-size: 1.1em;
-    }
-    .acordeon-exp.open .acordeon-icon {
-      transform: rotate(90deg);
-    }
-    .acordeon-contenido {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      padding: 0 24px;
-      background: #fff;
-      transition: all 0.5s cubic-bezier(.4,2.1,.6,.85);
-      color: #222c36;
-    }
-    .acordeon-exp.open .acordeon-contenido {
-      max-height: 900px;
-      opacity: 1;
-      padding: 18px 24px 18px 24px;
-    }
-    .acordeon-contenido ul {
-      padding-left: 18px;
-      margin: 10px 0 0 0;
-    }
-    .acordeon-empresa {
-      color: #2f69a6; font-weight: 500;
-    }
-    .acordeon-ubicacion {
-      color: #888; font-size: 0.97em; margin-left: 5px;
-    }
-    .acordeon-area {
-      color: #55729a; font-size: 1em; margin-top: 4px;
-    }
-    .acordeon-actual {
-      background: #e8f5e9;
-      color: #217a36;
-      border-left: 6px solid #43a047;
-      padding-left: 10px;
-      font-size: 0.98em;
-      border-radius: 0 0 0 0;
-      margin-bottom: 4px;
-      font-weight: 600;
-      display: inline-block;
-      margin-right: 10px;
-    }
-    .exp-resumen {
-      background: #f5f7fa;
-      border-left: 4px solid #2f69a6;
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin: 14px 0 14px 0;
-      font-size: 1em;
-      color: #35506b;
-      font-style: italic;
-    }
-    @media (max-width: 600px) {
-      .acordeon-titulo, .acordeon-contenido {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <nav class="main-nav">
-    <a href="index.html">Sobre mí</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="experiencia.html" class="active">Experiencia</a>
+  <nav class="main-nav" id="navbar">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Sobre mí</a>
+    <a href="proyectos.html"><i class="fa-solid fa-folder-open"></i> Proyectos</a>
+    <a href="experiencia.html" class="active"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+    <a href="#contacto" class="contact-nav"><i class="fa-solid fa-envelope"></i> Contacto</a>
   </nav>
   <header class="hero">
     <h1>Experiencia Profesional</h1>
     <p>Trayectoria en medio ambiente, tecnología, educación y gestión</p>
   </header>
-  <section class="contenido">
-    <h2><i class="fa-solid fa-briefcase"></i> Experiencia Laboral</h2>
+  <main>
+    <section class="contenido">
+      <h2><i class="fa-solid fa-briefcase"></i> Experiencia Laboral</h2>
 
-    <!-- Trabajo Actual -->
-    <div class="acordeon-exp">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span>
-          <span class="acordeon-actual"><i class="fa-solid fa-circle-dot"></i> Actual</span>
-          <i class="fa-solid fa-helmet-safety"></i> Auxiliar EHS 
-          <span class="acordeon-empresa">en Zoomlion</span> 
-          <span class="acordeon-ubicacion">| Nuevo León, México</span>
-        </span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <div class="acordeon-area">Departamento de Seguridad, Higiene y Medio Ambiente</div>
-        <ul>
-          <li>Implemento y doy seguimiento al Sistema de Gestión EHS, garantizando el cumplimiento de normas STPS.</li>
-          <li>Organizo y facilito capacitaciones certificadas (DC3) para el manejo seguro de residuos peligrosos.</li>
-          <li>Realizo inspecciones, control de riesgos y actualizo reportes regulatorios, apoyando la seguridad industrial y la protección ambiental.</li>
-        </ul>
-        <div class="exp-resumen">
-          En este entorno he absorbido conocimientos clave sobre seguridad y gestión ambiental, enfrentando retos que me han hecho crecer profesionalmente. Disfruto la colaboración con equipos multidisciplinarios y la satisfacción de contribuir a un entorno laboral más seguro y responsable.
+      <!-- Trabajo Actual -->
+      <div class="acordeon-exp open">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="true" aria-controls="exp-zoomlion">
+          <span>
+            <span class="acordeon-actual"><i class="fa-solid fa-circle-dot"></i> Actual</span>
+            <i class="fa-solid fa-helmet-safety"></i> Auxiliar EHS 
+            <span class="acordeon-empresa">en Zoomlion</span> 
+            <span class="acordeon-ubicacion">| Nuevo León, México</span>
+          </span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="exp-zoomlion">
+          <div class="acordeon-area">Departamento de Seguridad, Higiene y Medio Ambiente</div>
+          <ul>
+            <li>Implemento y doy seguimiento al Sistema de Gestión EHS, garantizando el cumplimiento de normas STPS.</li>
+            <li>Organizo y facilito capacitaciones certificadas (DC3) para el manejo seguro de residuos peligrosos.</li>
+            <li>Realizo inspecciones, control de riesgos y actualizo reportes regulatorios, apoyando la seguridad industrial y la protección ambiental.</li>
+          </ul>
+          <div class="exp-resumen">
+            En este entorno he absorbido conocimientos clave sobre seguridad y gestión ambiental, enfrentando retos que me han hecho crecer profesionalmente. Disfruto la colaboración con equipos multidisciplinarios y la satisfacción de contribuir a un entorno laboral más seguro y responsable.
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Servicio social -->
-    <div class="acordeon-exp">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span>
-          <i class="fa-solid fa-building-columns"></i> Servicio Social 
-          <span class="acordeon-empresa">en Facultad de Arquitectura, UANL</span> 
-          <span class="acordeon-ubicacion">| Nuevo León, México</span>
-        </span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <div class="acordeon-area">Dirección de Planeación y Organización de Espacios y Edificios Universitarios</div>
-        <ul>
-          <li>Colaboré en proyectos de gestión y planificación de espacios universitarios, dedicando 480 horas al análisis de cartografía y elaboración de mapas para el desarrollo y toma de decisiones en infraestructura.</li>
-        </ul>
-        <div class="exp-resumen">
-          Fue una experiencia enriquecedora donde absorbí gran aprendizaje en planeación espacial y el valor de la precisión en la cartografía. Disfruté mucho poder aportar al crecimiento y organización de la universidad a través de mi trabajo.
+      <!-- Servicio social -->
+      <div class="acordeon-exp">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="exp-servicio">
+          <span>
+            <i class="fa-solid fa-building-columns"></i> Servicio Social 
+            <span class="acordeon-empresa">en Facultad de Arquitectura, UANL</span> 
+            <span class="acordeon-ubicacion">| Nuevo León, México</span>
+          </span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="exp-servicio">
+          <div class="acordeon-area">Dirección de Planeación y Organización de Espacios y Edificios Universitarios</div>
+          <ul>
+            <li>Colaboré en proyectos de gestión y planificación de espacios universitarios, dedicando 480 horas al análisis de cartografía y elaboración de mapas para el desarrollo y toma de decisiones en infraestructura.</li>
+          </ul>
+          <div class="exp-resumen">
+            Fue una experiencia enriquecedora donde absorbí gran aprendizaje en planeación espacial y el valor de la precisión en la cartografía. Disfruté mucho poder aportar al crecimiento y organización de la universidad a través de mi trabajo.
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Prácticas profesionales -->
-    <div class="acordeon-exp">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span>
-          <i class="fa-solid fa-tree"></i> Prácticas Profesionales 
-          <span class="acordeon-empresa">en Laboratorio de Biología de la Conservación y Desarrollo Sostenible, UANL</span> 
-          <span class="acordeon-ubicacion">| Nuevo León, México</span>
-        </span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <ul>
-          <li>Participé en proyectos de conservación de la biodiversidad y gestión de recursos naturales.</li>
-          <li>Realicé análisis de datos ambientales y colaboré en la implementación de estrategias sostenibles para la preservación de ecosistemas.</li>
-        </ul>
-        <div class="exp-resumen">
-          Durante mis prácticas aprendí muchísimo sobre conservación y sostenibilidad. Disfruté trabajar con personas apasionadas y contribuir activamente a la protección de los ecosistemas de mi región.
+      <!-- Prácticas profesionales -->
+      <div class="acordeon-exp">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="exp-practicas">
+          <span>
+            <i class="fa-solid fa-tree"></i> Prácticas Profesionales 
+            <span class="acordeon-empresa">en Laboratorio de Biología de la Conservación y Desarrollo Sostenible, UANL</span> 
+            <span class="acordeon-ubicacion">| Nuevo León, México</span>
+          </span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="exp-practicas">
+          <ul>
+            <li>Participé en proyectos de conservación de la biodiversidad y gestión de recursos naturales.</li>
+            <li>Realicé análisis de datos ambientales y colaboré en la implementación de estrategias sostenibles para la preservación de ecosistemas.</li>
+          </ul>
+          <div class="exp-resumen">
+            Durante mis prácticas aprendí muchísimo sobre conservación y sostenibilidad. Disfruté trabajar con personas apasionadas y contribuir activamente a la protección de los ecosistemas de mi región.
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Docente -->
-    <div class="acordeon-exp">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span>
-          <i class="fa-solid fa-chalkboard-user"></i> Docente 
-          <span class="acordeon-empresa">en Instituto Eglantyne Jebb</span> 
-          <span class="acordeon-ubicacion">| Apodaca, Nuevo León</span>
-        </span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <ul>
-          <li>Impartí clases de inglés y robótica a estudiantes de 1° a 3° grado de primaria.</li>
-          <li>Fomenté habilidades tecnológicas, pensamiento lógico y comprensión del idioma en un entorno bilingüe.</li>
-        </ul>
-        <div class="exp-resumen">
-          Ser docente me permitió descubrir cómo una materia puede dejar una huella significativa en un niño. Más allá de enseñar la importancia de la tecnología, disfruté ver cómo los estudiantes se daban cuenta de lo que pueden lograr con ella: desde despertar su creatividad hasta cambiar la forma en que observan y resuelven problemas en su entorno. Inspirar a los niños a explorar y a ver el mundo de manera distinta fue una de las experiencias más gratificantes de mi vida profesional.
-    </div>
+      <!-- Docente -->
+      <div class="acordeon-exp">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="exp-docente">
+          <span>
+            <i class="fa-solid fa-chalkboard-user"></i> Docente 
+            <span class="acordeon-empresa">en Instituto Eglantyne Jebb</span> 
+            <span class="acordeon-ubicacion">| Apodaca, Nuevo León</span>
+          </span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="exp-docente">
+          <ul>
+            <li>Impartí clases de inglés y robótica a estudiantes de 1° a 3° grado de primaria.</li>
+            <li>Fomenté habilidades tecnológicas, pensamiento lógico y comprensión del idioma en un entorno bilingüe.</li>
+          </ul>
+          <div class="exp-resumen">
+            Ser docente me permitió descubrir cómo una materia puede dejar una huella significativa en un niño. Más allá de enseñar la importancia de la tecnología, disfruté ver cómo los estudiantes se daban cuenta de lo que pueden lograr con ella: desde despertar su creatividad hasta cambiar la forma en que observan y resuelven problemas en su entorno. Inspirar a los niños a explorar y a ver el mundo de manera distinta fue una de las experiencias más gratificantes de mi vida profesional.
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Gestor Ambiental -->
-    <div class="acordeon-exp">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span>
-          <i class="fa-solid fa-leaf"></i> Gestor Ambiental 
-          <span class="acordeon-empresa">en Gestoría Monterrey</span> 
-          <span class="acordeon-ubicacion">| Nuevo León, México</span>
-        </span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <div class="acordeon-area">Departamento Ambiental</div>
-        <ul>
-          <li>Gestioné trámites y reportes regulatorios ambientales, asegurando el cumplimiento normativo.</li>
-          <li>Participé en auditorías ambientales y asesoré en la obtención de permisos y licencias, contribuyendo a la mejora continua de los procesos de la empresa.</li>
-        </ul>
-        <div class="exp-resumen">
-          Absorbí un profundo conocimiento sobre normativas y procesos ambientales. En este departamento ambiental segui aplicando lo que mas me apasiona y son las SIG
+      <!-- Gestor Ambiental -->
+      <div class="acordeon-exp">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="exp-gestoria">
+          <span>
+            <i class="fa-solid fa-leaf"></i> Gestor Ambiental 
+            <span class="acordeon-empresa">en Gestoría Monterrey</span> 
+            <span class="acordeon-ubicacion">| Nuevo León, México</span>
+          </span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="exp-gestoria">
+          <div class="acordeon-area">Departamento Ambiental</div>
+          <ul>
+            <li>Gestioné trámites y reportes regulatorios ambientales, asegurando el cumplimiento normativo.</li>
+            <li>Participé en auditorías ambientales y asesoré en la obtención de permisos y licencias, contribuyendo a la mejora continua de los procesos de la empresa.</li>
+          </ul>
+          <div class="exp-resumen">
+            Absorbí un profundo conocimiento sobre normativas y procesos ambientales. En este departamento ambiental seguí aplicando lo que más me apasiona: los SIG.
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- Contacto visual -->
+    <section class="contacto-section" id="contacto">
+      <h2><i class="fa-solid fa-envelope"></i> Contacto</h2>
+      <div class="contacto-visual">
+        <ul class="contacto-lista">
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:8131282979">813 128 2979</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:sebastian5542@hotmail.com">sebastian5542@hotmail.com</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/gerardo-sebastian-martinez-guel-4247402ab/" target="_blank" rel="noopener">Mi LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
   <footer>
     <p>© 2025 Gerardo Sebastian Martinez Guel</p>
   </footer>
   <script>
     function toggleAccordion(btn) {
       const exp = btn.closest('.acordeon-exp');
-      exp.classList.toggle('open');
-      // Solo uno abierto a la vez
+      const isOpen = exp.classList.contains('open');
       document.querySelectorAll('.acordeon-exp').forEach(function(e){
-        if (e !== exp) e.classList.remove('open');
+        e.classList.remove('open');
+        e.querySelector('.acordeon-titulo').setAttribute('aria-expanded', 'false');
       });
+      if(!isOpen) {
+        exp.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     }
+    // Abre el primero por defecto
+    document.querySelector('.acordeon-exp').classList.add('open');
+    document.querySelector('.acordeon-exp .acordeon-titulo').setAttribute('aria-expanded', 'true');
   </script>
 </body>
 </html>
