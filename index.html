@@ -2,7 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sobre mí | Portafolio SIG</title>
+  <title>Sobre Mí | Portafolio SIG</title>
+  <!-- Google Fonts: Montserrat & Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,24 +15,119 @@
     <a href="proyectos.html">Proyectos</a>
     <a href="experiencia.html">Experiencia</a>
   </nav>
+  
+  <!-- Logos de la facultad y GIS -->
+  <div class="header-logos-row">
+    <img src="logo_fcb.png" alt="Logo Facultad de Ciencias Biológicas UANL" class="header-logo-img" title="Facultad de Ciencias Biológicas UANL">
+    <img src="GIS.png" alt="Logo GIS" class="header-logo-img" title="Logo GIS">
+  </div>
+
   <header class="hero">
-    <h1>Tu Nombre</h1>
-    <p>Biólogo apasionado por los Sistemas de Información Geográfica</p>
+    <h1>¡Hola! Soy Gerardo</h1>
+    <p>Biólogo apasionado por la tecnología, la cartografía y los SIG</p>
   </header>
   <section class="contenido">
-    <h2>Sobre mí</h2>
-    <p>
-      ¡Hola! Soy <strong>Tu Nombre</strong>, biólogo con especialización en SIG y cartografía digital. Me motiva combinar la ciencia y la tecnología para visualizar datos espaciales y contribuir a la conservación ambiental.
-    </p>
-    <p>
-      Disfruto aprender nuevas herramientas, enseñar y trabajar en proyectos que generen impacto positivo. Estoy convencido de que los mapas y los datos geográficos pueden ayudar a tomar mejores decisiones y contar historias que transforman nuestro entorno.
-    </p>
-    <p>
-      Si quieres saber más sobre mi trabajo o colaborar en algún proyecto, no dudes en contactarme.
-    </p>
+    <h2><i class="fa-solid fa-user"></i> Conóceme</h2>
+
+    <!-- Sobre mí -->
+    <div class="acordeon-sobremi open">
+      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
+        <span><i class="fa-solid fa-address-card"></i> Sobre mí</span>
+        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+      </button>
+      <div class="acordeon-contenido">
+        <span class="section-title">Formación Académica</span>
+        <p>
+          Soy <span class="important">Licenciado en Biología</span>, egresado de la <span class="important">Universidad Autónoma de Nuevo León</span>.
+        </p>
+        <p>
+          Durante mi formación universitaria me especialicé en el estudio integral de las ciencias biológicas, con énfasis en temas ambientales y en el uso de herramientas tecnológicas para el análisis y gestión de información.
+        </p>
+      </div>
+    </div>
+
+    <!-- Lo que me apasiona (optimizado y con habilidades visuales) -->
+   <div class="acordeon-sobremi">
+  <button class="acordeon-titulo" onclick="toggleAccordion(this)">
+    <span><i class="fa-solid fa-lightbulb"></i> Lo que me apasiona</span>
+    <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+  <div class="acordeon-contenido">
+    <div class="pasiones-visual">
+      <div class="pasiones-intro">
+        <i class="fa-solid fa-globe pasion-icon"></i>
+        <div>
+          <span class="section-title">Tecnología & Biología: una combinación inspiradora</span>
+          <p>
+            Me apasiona fusionar la biología con la tecnología para generar soluciones innovadoras. Disfruto el análisis y la visualización de fenómenos ambientales usando herramientas modernas, y comunicar resultados de manera clara y atractiva.
+          </p>
+        </div>
+      </div>
+      <div class="skills-chips-title"><i class="fa-solid fa-toolbox"></i> Herramientas y habilidades principales</div>
+      <div class="skills-chips">
+        <span class="chip"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="chip"><i class="fa-brands fa-r-project"></i> R / RStudio</span>
+        <span class="chip"><i class="fa-solid fa-map"></i> QGIS</span>
+        <span class="chip"><i class="fa-solid fa-map-location-dot"></i> ArcGIS</span>
+        <span class="chip"><i class="fa-solid fa-database"></i> Bases de datos geográficas</span>
+        <span class="chip"><i class="fa-solid fa-water"></i> HEC-RAS</span>
+        <span class="chip"><i class="fa-solid fa-satellite"></i> Teledetección</span>
+      </div>
+      <div class="skills-chips-title"><i class="fa-solid fa-lightbulb"></i> Aplicaciones favoritas</div>
+      <ul>
+        <li>Cartografía digital y mapas temáticos para conservación y gestión ambiental.</li>
+        <li>Análisis espacial de riesgos, modelado ambiental y procesamiento de datos ecológicos.</li>
+        <li>Automatización de procesos y visualización interactiva de datos.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!-- Hobbies -->
+    <div class="acordeon-sobremi">
+      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
+        <span><i class="fa-solid fa-heart"></i> Hobbies e intereses</span>
+        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+      </button>
+      <div class="acordeon-contenido">
+        <span class="section-title">Más allá de la ciencia</span>
+        <div class="hobbie-item">
+          <img src="natacion.jpeg" alt="Natación" title="Natación" class="hobbie-img">
+          <div>
+            <strong>Natación:</strong> Practico mi deporte favorito, la natación, actividad que disfruto por su disciplina y que me ha llevado a participar en torneos, ganar medallas y superarme constantemente.
+          </div>
+        </div>
+        <div class="hobbie-item">
+          <img src="natacion1.jpeg" alt="Convivencia/Amigos" title="Convivencia/Amigos" class="hobbie-img">
+          <div>
+            
+          </div>
+        </div>
+        <div class="hobbie-item">
+          <img src="videojuegos.jpeg" alt="Videojuegos" title="Videojuegos" class="hobbie-img">
+          <div>
+            <strong>Videojuegos y Esports:</strong> Soy un apasionado de los videojuegos y los Esports, donde he encontrado una comunidad, nuevos retos y la oportunidad de desarrollar habilidades como el trabajo en equipo, la estrategia y la resolución de problemas en entornos digitales.
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <footer>
-    <p>© 2025 Tu Nombre</p>
+    <p>© 2025 Gerardo Sebastian Martinez Guel</p>
   </footer>
+  <script>
+    function toggleAccordion(btn) {
+      const section = btn.closest('.acordeon-sobremi');
+      const isOpen = section.classList.contains('open');
+      // cerrar todos
+      document.querySelectorAll('.acordeon-sobremi').forEach(function(e){
+        e.classList.remove('open');
+      });
+      // abrir solo el clickeado si no estaba abierto
+      if(!isOpen) section.classList.add('open');
+    }
+    // Abre el primero por defecto
+    document.querySelector('.acordeon-sobremi').classList.add('open');
+  </script>
 </body>
 </html>
