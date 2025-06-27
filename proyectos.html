@@ -3,7 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <title>Proyectos | Portafolio SIG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .section-title {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: #2f69a6;
+      font-size: 1.13em;
+      margin: 18px 0 10px 0;
+      display: block;
+      letter-spacing: 0.5px;
+    }
+    .important { font-weight: 700; color: #1c4c7e; }
+    .certificados-sig {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 22px 0 10px 0;
+    }
+    .certificado-sig {
+      max-width: 340px;
+      text-align: center;
+      background: #f7fafc;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(30,94,176,0.07);
+      padding: 14px 10px 12px 10px;
+      margin-bottom: 16px;
+    }
+    .certificado-sig img {
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 6px rgba(30,94,176,0.10);
+    }
+    .cert-desc {
+      font-size: 1em;
+      color: #23416a;
+      margin: 0;
+    }
+    @media (max-width: 650px) {
+      .certificados-sig { flex-direction: column; align-items: center; }
+      .certificado-sig { max-width: 96vw; }
+    }
+    /* Proyectos grid */
+    .proyectos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-bottom: 32px;
+      margin-top: 18px;
+    }
+    .proyecto-card {
+      background: #fff;
+      border-radius: 11px;
+      box-shadow: 0 2px 10px rgba(30,94,176,0.10);
+      max-width: 340px;
+      padding: 22px 18px 18px 18px;
+      flex: 1 1 320px;
+      min-width: 270px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.15s;
+    }
+    .proyecto-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(30,94,176,0.12);
+    }
+    .proyecto-titulo {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.11em;
+      color: #1c4c7e;
+      margin-bottom: 10px;
+    }
+    .proyecto-desc {
+      font-size: 1em;
+      color: #23416a;
+      margin-bottom: 12px;
+    }
+    .proyecto-link {
+      margin-top: auto;
+      color: #2679ce;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.16s;
+      font-size: 0.98em;
+    }
+    .proyecto-link:hover {
+      text-decoration: underline;
+      color: #1c4c7e;
+    }
+    .proyecto-image {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(30,94,176,0.08);
+    }
+    @media (max-width: 900px) {
+      .proyectos-grid { gap: 20px; }
+      .proyecto-card { max-width: 98vw; min-width: 80vw; }
+    }
+    @media (max-width: 600px) {
+      .proyectos-grid { flex-direction: column; gap: 18px; }
+      .proyecto-card { max-width: 96vw; min-width: 0; }
+    }
+    .nav-title {
+      font-size: 1.4em;
+      margin: 0 0 18px 0;
+      color: #23416a;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
   <nav class="main-nav">
@@ -11,22 +129,78 @@
     <a href="proyectos.html" class="active">Proyectos</a>
     <a href="experiencia.html">Experiencia</a>
   </nav>
+  <header class="hero">
+    <h1 class="nav-title"><i class="fa-solid fa-diagram-project"></i> Proyectos & Participación</h1>
+    <p>Explora algunos de mis proyectos y experiencias destacadas en SIG, así como mi participación en pláticas y eventos de tecnología geoespacial.</p>
+  </header>
+
+  <!-- Pláticas y eventos SIG -->
   <section class="contenido">
-    <h2>Proyectos en los que he trabajado</h2>
-    <div class="galeria">
-      <div class="tarjeta">
-        <h3>Mapa de rutas ambientales</h3>
-        <p>Análisis de corredores ecológicos para conservación urbana.</p>
+    <h2><i class="fa-solid fa-chalkboard-user"></i> Pláticas y eventos SIG</h2>
+    <p>
+      Me gusta participar en eventos, talleres y pláticas relacionados con los Sistemas de Información Geográfica (SIG) y tecnologías afines, siempre que estén a mi alcance (la mayoría han sido de manera virtual). Disfruto conocer nuevas tecnologías y pensar cómo podrían aplicarse en distintas áreas, no sólo en la biología sino también en campos como protección civil, medio ambiente, educación, entre otros. Siempre estoy abierto a aprender, explorar herramientas innovadoras y participar en eventos que contribuyan a mi crecimiento profesional y personal.
+    </p>
+    <div class="certificados-sig">
+      <div class="certificado-sig">
+        <img src="ARSET_CERTIFICATE_Spectral_Indices_QGIS.jpg" alt="Certificado ARSET QGIS" />
+        <p class="cert-desc"><b>NASA ARSET:</b> Calculating Spectral Indices for Land and Aquatic Applications Using QGIS</p>
       </div>
-      <div class="tarjeta">
-        <h3>Cartografía para conservación ecológica</h3>
-        <p>Proyecto de monitoreo y visualización de áreas naturales protegidas.</p>
+      <div class="certificado-sig">
+        <img src="ARSET_CERTIFICATE_Methane.jpg" alt="Certificado ARSET Methane" />
+        <p class="cert-desc"><b>NASA ARSET:</b> Methane Observations for Large Emission Event Detection and Monitoring</p>
       </div>
-      <!-- Puedes agregar más tarjetas de proyectos aquí -->
     </div>
   </section>
+
+  <!-- Proyectos principales -->
+  <section class="contenido">
+    <h2><i class="fa-solid fa-folder-open"></i> Proyectos destacados</h2>
+    <div class="proyectos-grid">
+      <!-- Proyecto Personal: Dashboard EPP con IA -->
+      <div class="proyecto-card">
+        <img src="dashboardzoomlion.png" alt="Dashboard de entregas de EPP" class="proyecto-image">
+        <span class="proyecto-titulo">Dashboard Dinámico de Entregas de EPP con IA</span>
+        <div class="proyecto-desc">
+          Proyecto personal para optimizar el control de entregas de EPP mediante un dashboard interactivo actualizado desde un archivo <b>CSV</b>. Permite visualizar quién recibe EPP, cantidades y tipo de cambio (extravio, cambio o nuevo ingreso). Disponible en GitHub Pages para acceso fácil y gratuito.
+        </div>
+        <a class="proyecto-link" href="https://lirafernandez.github.io/Zoomliontest/" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Dashboard en vivo
+        </a>
+      </div>
+      <!-- Proyecto Atlas de Riesgos -->
+      <div class="proyecto-card">
+        <span class="proyecto-titulo">Atlas de Riesgos Municipio de Guadalupe</span>
+        <div class="proyecto-desc">
+          Servicio social realizado en colaboración con la Facultad de Arquitectura UANL. Apoyé en la <b>revisión y validación de cartografía</b> (proyecciones, descripciones y atributos) para el Atlas de Riesgos de Guadalupe, asegurando la calidad geoespacial del proyecto.(No se cuentan con imagenes realizandolo rebido a la confidencialidad en su momento)
+        </div>
+      </div>
+      <!-- Proyecto Modelos Predictivos -->
+      <div class="proyecto-card">
+        <img src="modelopredictivo.png" alt="Modelos predictivos para especies" class="proyecto-image">
+        <span class="proyecto-titulo">Modelos Predictivos para Especies y Visualización SIG</span>
+        <div class="proyecto-desc">
+          Creación de <b>modelos predictivos de distribución de especies</b> usando variables climáticas de WorldClim. Los resultados se visualizaron y analizaron en QGIS para el mapeo ecológico y espacial.
+        </div>
+           <a class="proyecto-link" href="https://github.com/lirafernandez/Portafolio/blob/b5b65f26553059ba2667b8df4015b4d73925cfd8/PIA%20COMPLETO%20CAMBIO%20CLIMATICO.pdf" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver PDF del modelo teorico
+        </a>
+      </div>
+      <!-- Proyecto Route Planning -->
+<div class="proyecto-card">
+  <span class="proyecto-titulo">Análisis de Eficiencia en Route Planning: QGIS vs RStudio</span>
+  <img src="routeplaning.png" alt="Análisis de eficiencia en route planning" class="proyecto-image">
+  <div class="proyecto-desc">
+    Comparativa de eficiencia entre dos métodos de planificación de rutas empleando QGIS y RStudio, evaluando resultados, tiempos de procesamiento y visualización de rutas óptimas.
+  </div>
+  <a class="proyecto-link" href="https://github.com/lirafernandez/Portafolio/blob/c0d1aa3233080879941d463269a297238c76f661/Assessment_Tecnico_Jul2024___.pdf" target="_blank" rel="noopener">
+    <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver análisis completo (PDF)
+  </a>
+</div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Tu Nombre</p>
+    <p>© 2025 Gerardo Sebastian Martinez Guel</p>
   </footer>
 </body>
 </html>
