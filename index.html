@@ -10,108 +10,130 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="main-nav">
-    <a href="index.html" class="active">Sobre mí</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="experiencia.html">Experiencia</a>
+  <nav class="main-nav" id="navbar">
+    <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Sobre mí</a>
+    <a href="proyectos.html"><i class="fa-solid fa-folder-open"></i> Proyectos</a>
+    <a href="experiencia.html"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+    <a href="#contacto" class="contact-nav"><i class="fa-solid fa-envelope"></i> Contacto</a>
   </nav>
   
   <!-- Logos de la facultad y GIS -->
-  <div class="header-logos-row">
-    <img src="logo_fcb.png" alt="Logo Facultad de Ciencias Biológicas UANL" class="header-logo-img" title="Facultad de Ciencias Biológicas UANL">
-    <img src="GIS.png" alt="Logo GIS" class="header-logo-img" title="Logo GIS">
-  </div>
+<div class="header-logos-row">
+  <img src="logo_fcb.png" alt="Logo Facultad de Ciencias Biológicas UANL" class="header-logo-img">
+  <img src="GIS.png" alt="Logo GIS" class="header-logo-img">
+</div>
 
   <header class="hero">
     <h1>¡Hola! Soy Gerardo</h1>
     <p>Biólogo apasionado por la tecnología, la cartografía y los SIG</p>
   </header>
-  <section class="contenido">
-    <h2><i class="fa-solid fa-user"></i> Conóceme</h2>
-
-    <!-- Sobre mí -->
-    <div class="acordeon-sobremi open">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span><i class="fa-solid fa-address-card"></i> Sobre mí</span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <span class="section-title">Formación Académica</span>
-        <p>
-          Soy <span class="important">Licenciado en Biología</span>, egresado de la <span class="important">Universidad Autónoma de Nuevo León</span>.
-        </p>
-        <p>
-          Durante mi formación universitaria me especialicé en el estudio integral de las ciencias biológicas, con énfasis en temas ambientales y en el uso de herramientas tecnológicas para el análisis y gestión de información.
-        </p>
-      </div>
-    </div>
-
-    <!-- Lo que me apasiona (optimizado y con habilidades visuales) -->
-   <div class="acordeon-sobremi">
-  <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-    <span><i class="fa-solid fa-lightbulb"></i> Lo que me apasiona</span>
-    <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-  </button>
-  <div class="acordeon-contenido">
-    <div class="pasiones-visual">
-      <div class="pasiones-intro">
-        <i class="fa-solid fa-globe pasion-icon"></i>
-        <div>
-          <span class="section-title">Tecnología & Biología: una combinación inspiradora</span>
+  <main>
+    <section class="contenido">
+      <h2><i class="fa-solid fa-user"></i> Conóceme</h2>
+      <!-- Sobre mí -->
+      <div class="acordeon-sobremi open">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="true" aria-controls="sobremi">
+          <span><i class="fa-solid fa-address-card"></i> Sobre mí</span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="sobremi">
+          <span class="section-title">Formación Académica</span>
           <p>
-            Me apasiona fusionar la biología con la tecnología para generar soluciones innovadoras. Disfruto el análisis y la visualización de fenómenos ambientales usando herramientas modernas, y comunicar resultados de manera clara y atractiva.
+            Soy <span class="important">Licenciado en Biología</span>, egresado de la <span class="important">Universidad Autónoma de Nuevo León</span>.
+          </p>
+          <p>
+            Durante mi formación universitaria me especialicé en el estudio integral de las ciencias biológicas, con énfasis en temas ambientales y en el uso de herramientas tecnológicas para el análisis y gestión de información.
           </p>
         </div>
       </div>
-      <div class="skills-chips-title"><i class="fa-solid fa-toolbox"></i> Herramientas y habilidades principales</div>
-      <div class="skills-chips">
-        <span class="chip"><i class="fa-brands fa-python"></i> Python</span>
-        <span class="chip"><i class="fa-brands fa-r-project"></i> R / RStudio</span>
-        <span class="chip"><i class="fa-solid fa-map"></i> QGIS</span>
-        <span class="chip"><i class="fa-solid fa-map-location-dot"></i> ArcGIS</span>
-        <span class="chip"><i class="fa-solid fa-database"></i> Bases de datos geográficas</span>
-        <span class="chip"><i class="fa-solid fa-water"></i> HEC-RAS</span>
-        <span class="chip"><i class="fa-solid fa-satellite"></i> Teledetección</span>
-      </div>
-      <div class="skills-chips-title"><i class="fa-solid fa-lightbulb"></i> Aplicaciones favoritas</div>
-      <ul>
-        <li>Cartografía digital y mapas temáticos para conservación y gestión ambiental.</li>
-        <li>Análisis espacial de riesgos, modelado ambiental y procesamiento de datos ecológicos.</li>
-        <li>Automatización de procesos y visualización interactiva de datos.</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-    <!-- Hobbies -->
-    <div class="acordeon-sobremi">
-      <button class="acordeon-titulo" onclick="toggleAccordion(this)">
-        <span><i class="fa-solid fa-heart"></i> Hobbies e intereses</span>
-        <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
-      </button>
-      <div class="acordeon-contenido">
-        <span class="section-title">Más allá de la ciencia</span>
-        <div class="hobbie-item">
-          <img src="natacion.jpeg" alt="Natación" title="Natación" class="hobbie-img">
-          <div>
-            <strong>Natación:</strong> Practico mi deporte favorito, la natación, actividad que disfruto por su disciplina y que me ha llevado a participar en torneos, ganar medallas y superarme constantemente.
-          </div>
-        </div>
-        <div class="hobbie-item">
-          <img src="natacion1.jpeg" alt="Convivencia/Amigos" title="Convivencia/Amigos" class="hobbie-img">
-          <div>
-            
-          </div>
-        </div>
-        <div class="hobbie-item">
-          <img src="videojuegos.jpeg" alt="Videojuegos" title="Videojuegos" class="hobbie-img">
-          <div>
-            <strong>Videojuegos y Esports:</strong> Soy un apasionado de los videojuegos y los Esports, donde he encontrado una comunidad, nuevos retos y la oportunidad de desarrollar habilidades como el trabajo en equipo, la estrategia y la resolución de problemas en entornos digitales.
+      <!-- Pasiones -->
+      <div class="acordeon-sobremi">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="pasiones">
+          <span><i class="fa-solid fa-lightbulb"></i> Lo que me apasiona</span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="pasiones">
+          <div class="pasiones-visual">
+            <div class="pasiones-intro">
+              <i class="fa-solid fa-globe pasion-icon"></i>
+              <div>
+                <span class="section-title">Tecnología & Biología: una combinación inspiradora</span>
+                <p>
+                  Me apasiona fusionar la biología con la tecnología para generar soluciones innovadoras. Disfruto el análisis y la visualización de fenómenos ambientales usando herramientas modernas, y comunicar resultados de manera clara y atractiva.
+                </p>
+              </div>
+            </div>
+            <div class="skills-chips-title"><i class="fa-solid fa-toolbox"></i> Herramientas y habilidades principales</div>
+            <div class="skills-chips">
+              <span class="chip"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="chip"><i class="fa-brands fa-r-project"></i> R / RStudio</span>
+              <span class="chip"><i class="fa-solid fa-map"></i> QGIS</span>
+              <span class="chip"><i class="fa-solid fa-map-location-dot"></i> ArcGIS</span>
+              <span class="chip"><i class="fa-solid fa-database"></i> Bases de datos geográficas</span>
+              <span class="chip"><i class="fa-solid fa-water"></i> HEC-RAS</span>
+              <span class="chip"><i class="fa-solid fa-satellite"></i> Teledetección</span>
+            </div>
+            <div class="skills-chips-title"><i class="fa-solid fa-lightbulb"></i> Aplicaciones favoritas</div>
+            <ul>
+              <li>Cartografía digital y mapas temáticos para conservación y gestión ambiental.</li>
+              <li>Análisis espacial de riesgos, modelado ambiental y procesamiento de datos ecológicos.</li>
+              <li>Automatización de procesos y visualización interactiva de datos.</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+
+      <!-- Hobbies -->
+      <div class="acordeon-sobremi">
+        <button class="acordeon-titulo" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="hobbies">
+          <span><i class="fa-solid fa-heart"></i> Hobbies e intereses</span>
+          <span class="acordeon-icon"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <div class="acordeon-contenido" id="hobbies">
+          <span class="section-title">Más allá de la ciencia</span>
+          <div class="hobbie-item">
+            <img src="natacion.jpeg" alt="Natación" title="Natación" class="hobbie-img">
+            <div>
+              <strong>Natación:</strong> Practico mi deporte favorito, la natación, actividad que disfruto por su disciplina y que me ha llevado a participar en torneos, ganar medallas y superarme constantemente.
+            </div>
+          </div>
+          <div class="hobbie-item">
+            <img src="natacion1.jpeg" alt="Convivencia/Amigos" title="Convivencia/Amigos" class="hobbie-img">
+            <div>
+              <strong>Convivencia y amigos:</strong> Me gusta convivir con mis amigos y compartir momentos que enriquecen mi vida personal.
+            </div>
+          </div>
+          <div class="hobbie-item">
+            <img src="videojuegos.jpeg" alt="Videojuegos" title="Videojuegos" class="hobbie-img">
+            <div>
+              <strong>Videojuegos y Esports:</strong> Soy un apasionado de los videojuegos y los Esports, donde he encontrado una comunidad, nuevos retos y la oportunidad de desarrollar habilidades como el trabajo en equipo, la estrategia y la resolución de problemas en entornos digitales.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contacto visual -->
+    <section class="contacto-section" id="contacto">
+      <h2><i class="fa-solid fa-envelope"></i> Contacto</h2>
+      <div class="contacto-visual">
+        <ul class="contacto-lista">
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:8131282979">813 128 2979</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:sebastian5542@hotmail.com">sebastian5542@hotmail.com</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/gerardo-sebastian-martinez-guel-4247402ab/" target="_blank" rel="noopener">Mi LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
   <footer>
     <p>© 2025 Gerardo Sebastian Martinez Guel</p>
   </footer>
@@ -125,6 +147,11 @@
       });
       // abrir solo el clickeado si no estaba abierto
       if(!isOpen) section.classList.add('open');
+      // actualizar aria-expanded
+      document.querySelectorAll('.acordeon-titulo').forEach(function(b){
+        b.setAttribute('aria-expanded', 'false');
+      });
+      btn.setAttribute('aria-expanded', String(!isOpen));
     }
     // Abre el primero por defecto
     document.querySelector('.acordeon-sobremi').classList.add('open');
